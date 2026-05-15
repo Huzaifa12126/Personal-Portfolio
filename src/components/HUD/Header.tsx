@@ -21,7 +21,7 @@ export const Header = () => {
 
       <nav className="hidden md:flex gap-8 font-hud-data text-[10px] uppercase items-center">
         <Link href="/about" className="text-white/70 hover:text-primary hover:skew-x-2 transition-all cursor-pointer tracking-widest">ANOMALY_STATUS</Link>
-        <Link href="/skills" className="text-white/70 hover:text-secondary hover:skew-x-2 transition-all cursor-pointer tracking-widest border-b-2 border-secondary/0 hover:border-secondary">PROJECT_VAULT</Link>
+        <Link href="/skills" className="text-white/70 hover:text-secondary hover:skew-x-2 transition-all cursor-pointer tracking-widest border-b-2 border-secondary/0 hover:border-secondary">ARSENAL</Link>
         <Link href="/contact" className="text-white/70 hover:text-primary hover:skew-x-2 transition-all cursor-pointer tracking-widest">COORDS</Link>
       </nav>
 
