@@ -20,7 +20,7 @@ export const Sidebar = () => {
 
   const menuItems = [
     { label: 'PROJECT_TIMELINE', path: '/', icon: History },
-    { label: 'ARSENAL', path: '/skills', icon: Backpack },
+    { label: 'PROJECT_VAULT', path: '/skills', icon: Backpack },
     { label: 'LOGS', path: '/about', icon: FileText },
     { label: 'SIGNAL', path: '/contact', icon: Radio },
   ];
