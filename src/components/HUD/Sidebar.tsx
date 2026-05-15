@@ -91,5 +91,6 @@ export const Sidebar = () => {
         <span className="font-hud-data text-[10px] text-primary/70 tracking-widest uppercase italic">SYSTEM_STABLE // EARTH-1610</span>
       </div>
     </nav>
+    </>
   );
 };
