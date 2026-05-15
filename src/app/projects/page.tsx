@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { Sidebar } from "@/components/HUD/Sidebar";
+import { Header } from "@/components/HUD/Header";
 import { 
   ShieldCheck, 
   Plane, 
@@ -32,6 +33,7 @@ export default function ProjectsPage() {
   return (
     <main className="relative h-screen bg-background text-on-background overflow-x-hidden overflow-y-auto font-body-md md:pl-72 pb-32">
       <Sidebar />
+      <Header />
 
       {/* BACKGROUND ELEMENTS */}
       <div className="fixed inset-0 halftone opacity-30 z-0 pointer-events-none"></div>

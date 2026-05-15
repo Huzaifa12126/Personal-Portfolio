@@ -1,7 +1,8 @@
 import { SceneCanvas } from "@/components/Scene/Canvas";
 import { Sidebar } from "@/components/HUD/Sidebar";
+import { Header } from "@/components/HUD/Header";
 import { getGitHubProjects } from "@/lib/github";
-import { Terminal, Link as LinkIcon, Radar } from 'lucide-react';
+import { Radar } from 'lucide-react';
 
 export default async function Home() {
   const projects = await getGitHubProjects("Huzaifa12126");
@@ -9,24 +10,8 @@ export default async function Home() {
   return (
     <main className="relative h-screen w-full overflow-hidden bg-background">
       <Sidebar />
+      <Header />
       
-      {/* Top Header HUD from Screenshots */}
-      <header className="fixed top-0 right-0 p-8 z-50 flex items-center gap-10">
-        <div className="flex items-center gap-6">
-            <a href="https://github.com/Huzaifa12126" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group">
-                <div className="bg-white/10 p-1 group-hover:bg-primary transition-colors">
-                    <Terminal size={14} className="text-white" />
-                </div>
-                <span className="font-label-caps text-[10px] text-white/60 group-hover:text-primary tracking-widest uppercase">Github</span>
-            </a>
-            <a href="https://www.linkedin.com/in/huzaifa-nadeem-137706249" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group">
-                 <div className="bg-white/10 p-1 group-hover:bg-secondary transition-colors">
-                    <LinkIcon size={14} className="text-white" />
-                </div>
-                <span className="font-label-caps text-[10px] text-white/60 group-hover:text-secondary tracking-widest uppercase">Linkedin</span>
-            </a>
-        </div>
-      </header>
       <SceneCanvas projects={projects} />
 
       {/* 2D HUD Overlays */}

@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { Sidebar } from "@/components/HUD/Sidebar";
+import { Header } from "@/components/HUD/Header";
 import { ShieldCheck, Database, Globe, Terminal, Layout, Cpu, Wrench } from 'lucide-react';
 
 export default function SkillsPage() {
@@ -95,6 +96,7 @@ export default function SkillsPage() {
   return (
     <main className="relative h-screen bg-background text-on-background overflow-x-hidden overflow-y-auto font-body-md md:pl-72 pb-32">
       <Sidebar />
+      <Header />
 
       {/* BACKGROUND ELEMENTS */}
       <div className="fixed inset-0 vortex-bg opacity-50 z-0 pointer-events-none"></div>

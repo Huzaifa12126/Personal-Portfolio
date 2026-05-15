@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { Sidebar } from "@/components/HUD/Sidebar";
+import { Header } from "@/components/HUD/Header";
 import { Reticle } from "@/components/HUD/Reticle";
 import { ShieldCheck, GraduationCap, Fingerprint, MessageSquare } from 'lucide-react';
 
@@ -25,6 +26,7 @@ export default function AboutPage() {
   return (
     <main className="relative h-screen bg-background text-on-background overflow-x-hidden overflow-y-auto font-body-md md:pl-72 pb-32">
       <Sidebar />
+      <Header />
 
       {/* BACKGROUND ELEMENTS */}
       <div className="fixed inset-0 vortex-bg opacity-40 z-0 pointer-events-none"></div>
