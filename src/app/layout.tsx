@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { Reticle } from "@/components/HUD/Reticle";
+import { NavigationProvider } from "@/components/HUD/NavigationProvider";
 import "./globals.css";
 
 const anton = Anton({
@@ -34,8 +35,10 @@ export default function RootLayout({
       <body
         className={`${anton.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased overflow-hidden`}
       >
-        <Reticle />
-        {children}
+        <NavigationProvider>
+          <Reticle />
+          {children}
+        </NavigationProvider>
       </body>
     </html>
   );

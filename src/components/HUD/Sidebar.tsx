@@ -12,8 +12,11 @@ import {
   Layers
 } from 'lucide-react';
 
+import { useNavigation } from './NavigationProvider';
+
 export const Sidebar = () => {
   const pathname = usePathname();
+  const { isMobileMenuOpen, setMobileMenuOpen } = useNavigation();
 
   const menuItems = [
     { label: 'PROJECT_TIMELINE', path: '/', icon: History },
@@ -23,7 +26,18 @@ export const Sidebar = () => {
   ];
 
   return (
-    <nav className="fixed left-0 top-0 h-screen z-[60] flex flex-col hidden md:flex w-72 border-r border-secondary/20 bg-background/40 backdrop-blur-xl">
+    <>
+      {/* Mobile Backdrop */}
+      {isMobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-background/80 backdrop-blur-sm z-[55] md:hidden transition-opacity duration-300"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+
+      <nav className={`fixed left-0 top-0 h-screen z-[60] flex flex-col w-72 border-r border-secondary/20 bg-background/80 md:bg-background/40 backdrop-blur-xl transition-transform duration-500 ease-out ${
+        isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
+      }`}>
       <div className="p-8 pb-0">
         <h1 className="font-display-hero text-3xl text-primary tracking-tighter italic uppercase mb-2 drop-shadow-[0_0_10px_rgba(255,82,93,0.3)]">
           S.M HUZAIFA NADEEM

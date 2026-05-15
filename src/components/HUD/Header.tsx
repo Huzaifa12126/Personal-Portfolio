@@ -2,11 +2,23 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Terminal, Link as LinkIcon } from 'lucide-react';
+import { Terminal, Link as LinkIcon, Menu, X } from 'lucide-react';
+import { useNavigation } from './NavigationProvider';
 
 export const Header = () => {
+  const { isMobileMenuOpen, toggleMobileMenu } = useNavigation();
+
   return (
-    <header className="fixed top-0 right-0 p-8 z-50 flex items-center gap-12 pointer-events-auto">
+    <header className="fixed top-0 right-0 p-8 z-[70] flex items-center gap-6 md:gap-12 pointer-events-auto">
+      {/* Mobile Menu Toggle */}
+      <button 
+        onClick={toggleMobileMenu}
+        className="md:hidden bg-primary p-2 text-on-primary shadow-[4px_4px_0px_rgba(255,82,93,0.3)] active:scale-95 transition-all"
+        aria-label="Toggle Menu"
+      >
+        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
       <nav className="hidden md:flex gap-8 font-hud-data text-[10px] uppercase items-center">
         <Link href="/about" className="text-white/70 hover:text-primary hover:skew-x-2 transition-all cursor-pointer tracking-widest">ANOMALY_STATUS</Link>
         <Link href="/projects" className="text-white/70 hover:text-secondary hover:skew-x-2 transition-all cursor-pointer tracking-widest border-b-2 border-secondary/0 hover:border-secondary">PROJECT_VAULT</Link>
