@@ -10,6 +10,10 @@ A high-performance, multiversal portfolio built with **Next.js 16**, **React Thr
 - **Secure Signal (Contact):** A fully integrated contact form powered by **Formspree**, featuring comic-book "stickers" (BAM!, THWIP!).
 - **Glassmorphism Sidebar:** A transparent, blurred navigation system designed for maximum readability and visual depth.
 
+## Live Demo
+
+Check out the live multiversal portfolio: [huzaifanadeem-portfolio.vercel.app](https://huzaifanadeem-portfolio.vercel.app)
+
 ## Tech Stack
 
 - **Framework:** Next.js 16 (App Router)
